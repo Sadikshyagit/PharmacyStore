@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadikshya</title>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+		}
+		
+		.login {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			margin: auto;
+			padding: 20px;
+			width: 400px;
+		}
+		
+		.login h1 {
+			font-size: 24px;
+			font-weight: normal;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		
+		.login input[type="text"],
+		.login input[type="password"] {
+			background-color: #f1f1f1;
+			border: none;
+			border-radius: 3px;
+			color: #333;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 15px;
+			width: 100%;
+		}
+		
+		.login input[type="text"]:focus,
+		.login input[type="password"]:focus {
+			background-color: #e5e5e5;
+		}
+		
+		.login input[type="submit"] {
+			background-color: #008CBA;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 15px;
+			width: 100%;
+		}
+		
+		.login input[type="submit"]:hover {
+			background-color: #005F6B;
+		}
+		
+		.login a {
+			color: #008CBA;
+			text-decoration: none;
+		}
+		
+		.login a:hover {
+			color: #005F6B;
+		}
+	</style>
 </head>
 <body>
-    <h1> Welcome Sadikshya</h1>
+    
+
+	<div class="login">
+		<h1>Login</h1>
+		<form>
+			<input type="text" name="username" placeholder="Username">
+			<input type="password" name="password" placeholder="Password">
+			<input type="submit" value="Login">
+		</form>
+		<p>Don't have an account? <a href="{% url 'registration.signup'%}">Sign up</a></p>
+	</div>
 </body>
 </html>
