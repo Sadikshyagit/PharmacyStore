@@ -3,8 +3,9 @@ from . import views
 
 
 urlpatterns = [
-    path('',views.loginForm,name="registration.login"),
+    path('login/',views.loginForm,name="registration.login"),
+    path('',views.firstpage, name="first"),
     #There is set because it not accept duplicate
-    path('signup/',views.signform,name="registration.signup"),
-    path('store/',views.registrationStore,name="registration.store")
+    path('signup/',views.SignupPage,name="registration.signup"),
+    # path('store/',views.registrationStore,name="registration.store")
 ]
