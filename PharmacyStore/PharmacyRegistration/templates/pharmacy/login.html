@@ -140,7 +140,7 @@ button{
         <div class="shape"></div>
     </div>
     <form method="post">
-        <h3>Doctor Login</h3>
+        <h3>Pharmacy Login</h3>
         {% csrf_token %} 
         <label for="username">Username</label>
         <input type="text" placeholder="Enter Username" id="username" name="username">
@@ -150,8 +150,8 @@ button{
 
         <button type="submit">Log In</button>
         
-        <a href="{% url 'doctor.signup' %}" >Create a account</a>
-        <a href="{% url 'doctor.signup' %}" >forget password</a>
+        <a href="{% url 'phar.signup' %}" >Create a account</a>
+        <a href="{% url 'phar.signup' %}" >forget password</a>
     </form>
 </body>
 </html>
